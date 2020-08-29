@@ -1,0 +1,380 @@
+
+@startuml
+class "meta" as meta {
+    .. Properties ..
+    _id: f1424f86-ca0f-4f0c-9438-43cc00509931
+    name: Green Company
+    created: 2020-04-03T15:53:05.929588
+    modified: 2020-04-03T15: 53: 05.929588
+    version: 2
+    language: de
+    status: active
+    url: https://green-bikes.de/privacy
+    _hash: d732a793562a3e5dc57645a8
+}
+class "controller" as controller {
+    .. Properties ..
+    name: Green Company AG
+    division: Product line e-mobility
+    address: Wolfsburger Ring 2, 38440 Berlin
+    country: DE
+    .. Objects ..
+    representative: [object Object]
+}
+class "representative" as controller.representative {
+    .. Properties ..
+    name: Jane Super
+    email: contact@greencompany.de
+    phone: 0049 151 1234 5678
+}
+class "dataProtectionOfficer" as dataProtectionOfficer {
+    .. Properties ..
+    name: Jane Super
+    address: Wolfsburger Ring 2, 38440 Berlin
+    country: DE
+    email: contact@greencompany.de
+    phone: 0049 151 1234 5678
+}
+class "dataDisclosed" as dataDisclosed {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as dataDisclosed.0 {
+    .. Properties ..
+    _id: f1424f86-ca0f-4f0c-9438-43cc00509931
+    category: E-mail address
+    .. Objects ..
+    purposes: [Array]
+    legalBases: [Array]
+    legitimateInterests: [Array]
+    recipients: [Array]
+    storage: [Array]
+    nonDisclosure: [object Object]
+}
+class "purposes" as dataDisclosed.0.purposes {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as dataDisclosed.0.purposes.0 {
+    .. Properties ..
+    purpose: Marketing
+    description: Newsletter will be sent out once a month.
+}
+class "legalBases" as dataDisclosed.0.legalBases {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+    1: [object Object]
+}
+class "0" as dataDisclosed.0.legalBases.0 {
+    .. Properties ..
+    reference: GDPR-99-1-a
+    description: The data are processed on the basis of Art. 99 GDPR which states...
+}
+class "1" as dataDisclosed.0.legalBases.1 {
+    .. Properties ..
+    reference: BDSG-42-5
+    description: BDSG-42-5 refers to the processing of personal data within...
+}
+class "legitimateInterests" as dataDisclosed.0.legitimateInterests {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as dataDisclosed.0.legitimateInterests.0 {
+    .. Properties ..
+    exists: true
+    reasoning: There is an legitimate interest based on ... and is not overwritten because ...
+}
+class "recipients" as dataDisclosed.0.recipients {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+    1: [object Object]
+}
+class "0" as dataDisclosed.0.recipients.0 {
+    .. Properties ..
+    name: Yellow Company AG
+    division: Product line e-mobility
+    address: Triana 123, 9999 Seville
+    country: ES
+    category: Marketing content provider
+    .. Objects ..
+    representative: [object Object]
+}
+class "representative" as dataDisclosed.0.recipients.0.representative {
+    .. Properties ..
+    name: Jane Super
+    email: contact@yellowcompany.de
+    phone: 0049 151 1234 9876
+}
+class "1" as dataDisclosed.0.recipients.1 {
+    .. Properties ..
+    category: Responsible Statistical Institutes
+}
+class "storage" as dataDisclosed.0.storage {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as dataDisclosed.0.storage.0 {
+    .. Properties ..
+    aggregationFunction: max
+    .. Objects ..
+    temporal: [Array]
+    purposeConditional: [Array]
+    legalBasisConditional: [Array]
+}
+class "temporal" as dataDisclosed.0.storage.0.temporal {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+    1: [object Object]
+}
+class "0" as dataDisclosed.0.storage.0.temporal.0 {
+    .. Properties ..
+    description: Creating backups.
+    ttl: 2005-08-09T18:31:42P3Y6M4DT12H30M17S
+}
+class "1" as dataDisclosed.0.storage.0.temporal.1 {
+    .. Properties ..
+    description: Finishing ordering process.
+    ttl: 2020-08-09T18:31:42P3Y6M4DT12H30M17S
+}
+class "purposeConditional" as dataDisclosed.0.storage.0.purposeConditional {
+    .. Properties ..
+    0: Data is stored until the end of the ordering process.
+}
+class "legalBasisConditional" as dataDisclosed.0.storage.0.legalBasisConditional {
+    .. Properties ..
+    0: SGB-100-42
+}
+class "nonDisclosure" as dataDisclosed.0.nonDisclosure {
+    .. Properties ..
+    legalRequirement: false
+    contractualRegulation: false
+    obligationToProvide: false
+    consequences: If the data is not disclosed, the shipment cannot be delivered.
+}
+class "thirdCountryTransfers" as thirdCountryTransfers {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as thirdCountryTransfers.0 {
+    .. Properties ..
+    country: ES
+    .. Objects ..
+    adequacyDecision: [object Object]
+    appropriateGuarantees: [object Object]
+    presenceOfEnforceableRightsAndEffectiveRemedies: [object Object]
+    standardDataProtectionClause: [object Object]
+}
+class "adequacyDecision" as thirdCountryTransfers.0.adequacyDecision {
+    .. Properties ..
+    available: true
+    description: An adequacy decision was made on the 23rd April 2020 by...
+}
+class "appropriateGuarantees" as thirdCountryTransfers.0.appropriateGuarantees {
+    .. Properties ..
+    available: true
+    description: Here the appropriate guarantee was formulated by...
+}
+class "presenceOfEnforceableRightsAndEffectiveRemedies" as thirdCountryTransfers.0.presenceOfEnforceableRightsAndEffectiveRemedies {
+    .. Properties ..
+    available: true
+    description: These rights are given because of...
+}
+class "standardDataProtectionClause" as thirdCountryTransfers.0.standardDataProtectionClause {
+    .. Properties ..
+    available: true
+    description: The standard data protection clause which applies here can be found here: ...
+}
+class "accessAndDataPortability" as accessAndDataPortability {
+    .. Properties ..
+    available: true
+    description: Data access is possible through...
+    url: https://green-bikes.de/access
+    email: access@greencompany.de
+    dataFormat: json
+    .. Objects ..
+    identificationEvidences: [Array]
+    administrativeFee: [object Object]
+}
+class "identificationEvidences" as accessAndDataPortability.identificationEvidences {
+    .. Properties ..
+    0: ID card copy
+    1: Email verification
+}
+class "administrativeFee" as accessAndDataPortability.administrativeFee {
+    .. Properties ..
+    amount: 0
+    currency: EUR
+}
+class "sources" as sources {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as sources.0 {
+    .. Properties ..
+    _id: f1423cc00509931
+    dataCategory: Creditworthiness
+    .. Objects ..
+    sources: [Array]
+}
+class "sources" as sources.0.sources {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as sources.0.sources.0 {
+    .. Properties ..
+    description: This information could be retrieved from...
+    url: https://blueCompany.org
+    publiclyAvailable: false
+}
+class "rightToInformation" as rightToInformation {
+    .. Properties ..
+    available: true
+    description: For the right to information please use this contact form and...
+    url: https://greencompany.org/rightToInformation
+    email: contact@greencompany.de
+    .. Objects ..
+    identificationEvidences: [Array]
+}
+class "identificationEvidences" as rightToInformation.identificationEvidences {
+    .. Properties ..
+    0: ID card copy
+    1: Email verification
+}
+class "rightToRectificationOrDeletion" as rightToRectificationOrDeletion {
+    .. Properties ..
+    available: true
+    description: For the right to rectification please use this contact form and...
+    url: https://greencompany.org/rights
+    email: contact@greencompany.de
+    .. Objects ..
+    identificationEvidences: [Array]
+}
+class "identificationEvidences" as rightToRectificationOrDeletion.identificationEvidences {
+    .. Properties ..
+    0: ID card copy
+    1: Email verification
+}
+class "rightToDataPortability" as rightToDataPortability {
+    .. Properties ..
+    available: false
+    description: Data portability is only possible when...
+    url: https://greencompany.org/rights
+    email: contact@greencompany.de
+    .. Objects ..
+    identificationEvidences: [Array]
+}
+class "identificationEvidences" as rightToDataPortability.identificationEvidences {
+    .. Properties ..
+    0: ID card copy
+}
+class "rightToWithdrawConsent" as rightToWithdrawConsent {
+    .. Properties ..
+    available: true
+    description: For the right to withdraw consent please use this contact form and...
+    url: https://greencompany.org/rights
+    email: contact@greencompany.de
+    .. Objects ..
+    identificationEvidences: [Array]
+}
+class "identificationEvidences" as rightToWithdrawConsent.identificationEvidences {
+    .. Properties ..
+    0: Email verification
+}
+class "rightToComplain" as rightToComplain {
+    .. Properties ..
+    available: true
+    description: For the right to complain please use this contact form and...
+    url: https://greencompany.org/rights
+    email: contact@greencompany.de
+    .. Objects ..
+    identificationEvidences: [Array]
+    supervisoryAuthority: [object Object]
+}
+class "identificationEvidences" as rightToComplain.identificationEvidences {
+    .. Properties ..
+    0: ID card copy
+    1: Email verification
+}
+class "supervisoryAuthority" as rightToComplain.supervisoryAuthority {
+    .. Properties ..
+    name: Commissioner for Data Protection
+    address: Friedrichstrasse 219, 10969 Berlin
+    country: DE
+    email: mailbox@privacy-berlin.de
+    phone: 0049 444 222 111
+}
+class "automatedDecisionMaking" as automatedDecisionMaking {
+    .. Properties ..
+    inUse: true
+    logicInvolved: The personal data are processed as follows...
+    scopeAndIntendedEffects: From processing follows...
+}
+class "changesOfPurpose" as changesOfPurpose {
+    .. Properties ..
+    .. Objects ..
+    0: [object Object]
+}
+class "0" as changesOfPurpose.0 {
+    .. Properties ..
+    description: Due to technial requirements...
+    plannedDateOfChange: 2020-08-2020-06-04T15:04:13+0000
+    urlOfNewVersion: https://greencomp.de/privacypolicy/2
+    .. Objects ..
+    affectedDataCategories: [Array]
+}
+class "affectedDataCategories" as changesOfPurpose.0.affectedDataCategories {
+    .. Properties ..
+    0: Email adress
+    1: Credit score
+}
+controller -- controller.representative
+dataDisclosed.0.purposes -- dataDisclosed.0.purposes.0
+dataDisclosed.0.legalBases -- dataDisclosed.0.legalBases.0
+dataDisclosed.0.legalBases -- dataDisclosed.0.legalBases.1
+dataDisclosed.0.legitimateInterests -- dataDisclosed.0.legitimateInterests.0
+dataDisclosed.0.recipients.0 -- dataDisclosed.0.recipients.0.representative
+dataDisclosed.0.recipients -- dataDisclosed.0.recipients.0
+dataDisclosed.0.recipients -- dataDisclosed.0.recipients.1
+dataDisclosed.0.storage.0.temporal -- dataDisclosed.0.storage.0.temporal.0
+dataDisclosed.0.storage.0.temporal -- dataDisclosed.0.storage.0.temporal.1
+dataDisclosed.0.storage.0 -- dataDisclosed.0.storage.0.temporal
+dataDisclosed.0.storage.0 -- dataDisclosed.0.storage.0.purposeConditional
+dataDisclosed.0.storage.0 -- dataDisclosed.0.storage.0.legalBasisConditional
+dataDisclosed.0.storage -- dataDisclosed.0.storage.0
+dataDisclosed.0 -- dataDisclosed.0.purposes
+dataDisclosed.0 -- dataDisclosed.0.legalBases
+dataDisclosed.0 -- dataDisclosed.0.legitimateInterests
+dataDisclosed.0 -- dataDisclosed.0.recipients
+dataDisclosed.0 -- dataDisclosed.0.storage
+dataDisclosed.0 -- dataDisclosed.0.nonDisclosure
+dataDisclosed -- dataDisclosed.0
+thirdCountryTransfers.0 -- thirdCountryTransfers.0.adequacyDecision
+thirdCountryTransfers.0 -- thirdCountryTransfers.0.appropriateGuarantees
+thirdCountryTransfers.0 -- thirdCountryTransfers.0.presenceOfEnforceableRightsAndEffectiveRemedies
+thirdCountryTransfers.0 -- thirdCountryTransfers.0.standardDataProtectionClause
+thirdCountryTransfers -- thirdCountryTransfers.0
+accessAndDataPortability -- accessAndDataPortability.identificationEvidences
+accessAndDataPortability -- accessAndDataPortability.administrativeFee
+sources.0.sources -- sources.0.sources.0
+sources.0 -- sources.0.sources
+sources -- sources.0
+rightToInformation -- rightToInformation.identificationEvidences
+rightToRectificationOrDeletion -- rightToRectificationOrDeletion.identificationEvidences
+rightToDataPortability -- rightToDataPortability.identificationEvidences
+rightToWithdrawConsent -- rightToWithdrawConsent.identificationEvidences
+rightToComplain -- rightToComplain.identificationEvidences
+rightToComplain -- rightToComplain.supervisoryAuthority
+changesOfPurpose.0 -- changesOfPurpose.0.affectedDataCategories
+changesOfPurpose -- changesOfPurpose.0
+@enduml
+
