@@ -5,20 +5,17 @@ The Transparency Information Language is introduced **[here](https://github.com/
 
 ## Usage
 ```bash
-
-x@y ~ git clone https://github.com/Transparency-Information-Language/visual-tilt.git
-x@y ~ cd visual-tilt/
-x@y ~ open index.html 
-      ^ Use your favorite browser here
+git clone https://github.com/Transparency-Information-Language/visual-tilt.git
+cd visual-tilt/
+open index.html 
+^ Use your favorite browser here
 ```
 
-![](/documentation/file-tilt-schema_json.png)
+![](documentation/file-tilt-schema_json.png)
 
 ## Author
 [Elias Grünewald](mailto:gruenewald@tu-berlin.de)
 
-## Author
-Elias Grünewald
 
 ## License
 [MIT License](LICENSE)
