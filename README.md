@@ -17,5 +17,8 @@ x@y ~ open index.html
 ## Author
 [Elias Grünewald](mailto:gruenewald@tu-berlin.de)
 
+## Author
+Elias Grünewald
+
 ## License
-GNU General Public License, Version 3
+[MIT License](LICENSE)
